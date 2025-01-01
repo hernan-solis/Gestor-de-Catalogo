@@ -94,5 +94,13 @@ namespace Presentacion
 
             cargarBase();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            FrmAlta frmAlta = new FrmAlta((Articulo)dgvArticulos.CurrentRow.DataBoundItem);
+            frmAlta.ShowDialog();
+            cargarBase();
+
+        }
     }
 }

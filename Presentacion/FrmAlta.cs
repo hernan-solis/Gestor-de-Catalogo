@@ -20,7 +20,16 @@ namespace Presentacion
             InitializeComponent();
         }
 
-        
+        private Articulo articulo { get; set; }
+
+        public FrmAlta(Articulo articuloSeleccionado) 
+        {
+            InitializeComponent();
+            articulo = articuloSeleccionado;
+            Text = "Modificacion";
+        }
+
+
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -28,9 +37,6 @@ namespace Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
-            Articulo articulo = new Articulo();
-            
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
 
             try
@@ -42,12 +48,16 @@ namespace Presentacion
                 articulo.Categoria= (Categoria)cbxCategoria.SelectedItem;
                 articulo.ImagenUrl = tbxImagenUrl.Text;
                 articulo.Precio = float.Parse(txbPrecio.Text.Replace(".",","));
-                
 
-
-                articuloNegocio.agregarArticulo(articulo);
-
-                
+                if (articulo.Id == 0)
+                {
+                    articuloNegocio.agregarArticulo(articulo);
+                }
+                else 
+                {
+                    articuloNegocio.modificarArticulo(articulo);
+                }
+  
             }
             catch (Exception ex)
             {
@@ -55,12 +65,7 @@ namespace Presentacion
                 MessageBox.Show(ex.ToString());
             }
 
-            
-          
             Close();
-
-
-
 
         }
 
@@ -87,6 +92,35 @@ namespace Presentacion
 
                 MessageBox.Show(ex.ToString());
             }
+
+
+            if (articulo == null)
+            {
+                articulo = new Articulo();
+            }
+            else
+            {
+                try
+                {
+                    tbxCodigo.Text = articulo.Codigo;
+                    tbxNombre.Text = articulo.Nombre;
+                    tbxDescripcion.Text = articulo.Descripcion;
+                    cbxMarca.SelectedValue = articulo.Marca.Id;
+                    cbxCategoria.SelectedValue = articulo.Categoria.Id;
+
+
+                    tbxImagenUrl.Text = articulo.ImagenUrl;
+                    txbPrecio.Text = articulo.Precio.ToString();
+
+                }
+                catch (Exception ex)
+                {
+
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+
+            
             
         }
 

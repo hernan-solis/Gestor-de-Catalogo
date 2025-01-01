@@ -69,7 +69,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(59, 41);
+            this.btnAgregar.Location = new System.Drawing.Point(61, 41);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
             this.btnAgregar.TabIndex = 2;
@@ -85,6 +85,7 @@
             this.btnModificar.TabIndex = 3;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnEliminar
             // 
@@ -118,7 +119,7 @@
             // 
             this.gbxArticuloSeleccionado.Controls.Add(this.btnEliminar);
             this.gbxArticuloSeleccionado.Controls.Add(this.btnModificar);
-            this.gbxArticuloSeleccionado.Location = new System.Drawing.Point(334, 411);
+            this.gbxArticuloSeleccionado.Location = new System.Drawing.Point(329, 470);
             this.gbxArticuloSeleccionado.Name = "gbxArticuloSeleccionado";
             this.gbxArticuloSeleccionado.Size = new System.Drawing.Size(200, 100);
             this.gbxArticuloSeleccionado.TabIndex = 7;
@@ -129,7 +130,7 @@
             // gbxNuevo
             // 
             this.gbxNuevo.Controls.Add(this.btnAgregar);
-            this.gbxNuevo.Location = new System.Drawing.Point(12, 411);
+            this.gbxNuevo.Location = new System.Drawing.Point(33, 470);
             this.gbxNuevo.Name = "gbxNuevo";
             this.gbxNuevo.Size = new System.Drawing.Size(200, 100);
             this.gbxNuevo.TabIndex = 5;
@@ -140,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(976, 570);
+            this.ClientSize = new System.Drawing.Size(973, 693);
             this.Controls.Add(this.gbxNuevo);
             this.Controls.Add(this.gbxArticuloSeleccionado);
             this.Controls.Add(this.lblImagen);

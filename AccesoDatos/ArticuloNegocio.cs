@@ -89,6 +89,39 @@ namespace AccesoDatos
 
         }
 
+        public void modificarArticulo(Articulo articulo) 
+        {
+            AccesoDatos accesoDatos = new AccesoDatos();
+
+            try
+            {
+                accesoDatos.setearConsulta("update ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio where Id = @Id;");
+               
+                accesoDatos.setearParametros("Id", articulo.Id.ToString());
+                accesoDatos.setearParametros("Codigo", articulo.Codigo);
+                accesoDatos.setearParametros("Nombre", articulo.Nombre);
+                accesoDatos.setearParametros("Descripcion", articulo.Descripcion);
+                accesoDatos.setearParametros("IdMarca", articulo.Marca.Id.ToString());
+                accesoDatos.setearParametros("IdCategoria", articulo.Categoria.Id.ToString());
+                accesoDatos.setearParametros("ImagenUrl", articulo.ImagenUrl);
+                accesoDatos.setearParametros("Precio", articulo.Precio.ToString(CultureInfo.InvariantCulture));
+
+                accesoDatos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                accesoDatos.cerrarConexion();
+            }
+
+
+        }
+
         public void eliminarArticulo(Articulo articulo) 
         {
             AccesoDatos accesoDatos = new AccesoDatos();
