@@ -53,7 +53,7 @@
             this.btnAceptar.Location = new System.Drawing.Point(68, 325);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptar.TabIndex = 0;
+            this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -63,7 +63,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(183, 325);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -127,28 +127,28 @@
             this.tbxCodigo.Location = new System.Drawing.Point(107, 32);
             this.tbxCodigo.Name = "tbxCodigo";
             this.tbxCodigo.Size = new System.Drawing.Size(121, 20);
-            this.tbxCodigo.TabIndex = 8;
+            this.tbxCodigo.TabIndex = 0;
             // 
             // tbxNombre
             // 
             this.tbxNombre.Location = new System.Drawing.Point(107, 64);
             this.tbxNombre.Name = "tbxNombre";
             this.tbxNombre.Size = new System.Drawing.Size(121, 20);
-            this.tbxNombre.TabIndex = 9;
+            this.tbxNombre.TabIndex = 1;
             // 
             // tbxDescripcion
             // 
             this.tbxDescripcion.Location = new System.Drawing.Point(107, 105);
             this.tbxDescripcion.Name = "tbxDescripcion";
             this.tbxDescripcion.Size = new System.Drawing.Size(121, 20);
-            this.tbxDescripcion.TabIndex = 10;
+            this.tbxDescripcion.TabIndex = 2;
             // 
             // tbxImagenUrl
             // 
             this.tbxImagenUrl.Location = new System.Drawing.Point(107, 220);
             this.tbxImagenUrl.Name = "tbxImagenUrl";
             this.tbxImagenUrl.Size = new System.Drawing.Size(121, 20);
-            this.tbxImagenUrl.TabIndex = 11;
+            this.tbxImagenUrl.TabIndex = 5;
             this.tbxImagenUrl.TextChanged += new System.EventHandler(this.tbxImagenUrl_TextChanged);
             this.tbxImagenUrl.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxImagenUrl_KeyPress);
             this.tbxImagenUrl.Leave += new System.EventHandler(this.tbxImagenUrl_Leave);
@@ -179,7 +179,7 @@
             this.cbxMarca.Location = new System.Drawing.Point(107, 148);
             this.cbxMarca.Name = "cbxMarca";
             this.cbxMarca.Size = new System.Drawing.Size(121, 21);
-            this.cbxMarca.TabIndex = 14;
+            this.cbxMarca.TabIndex = 3;
             // 
             // cbxCategoria
             // 
@@ -188,14 +188,14 @@
             this.cbxCategoria.Location = new System.Drawing.Point(107, 184);
             this.cbxCategoria.Name = "cbxCategoria";
             this.cbxCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cbxCategoria.TabIndex = 15;
+            this.cbxCategoria.TabIndex = 4;
             // 
             // txbPrecio
             // 
             this.txbPrecio.Location = new System.Drawing.Point(107, 261);
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(121, 20);
-            this.txbPrecio.TabIndex = 16;
+            this.txbPrecio.TabIndex = 6;
             // 
             // FrmAlta
             // 

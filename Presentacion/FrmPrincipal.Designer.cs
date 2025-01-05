@@ -43,18 +43,19 @@
             this.cbxCampo = new System.Windows.Forms.ComboBox();
             this.cbxCriterio = new System.Windows.Forms.ComboBox();
             this.tbxFiltro = new System.Windows.Forms.TextBox();
-            this.gbxFiltro = new System.Windows.Forms.GroupBox();
+            this.gbxBuscador = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenPrincipal)).BeginInit();
             this.gbxArticuloSeleccionado.SuspendLayout();
             this.gbxNuevo.SuspendLayout();
-            this.gbxFiltro.SuspendLayout();
+            this.gbxBuscador.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvArticulos
             // 
             this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.GridColor = System.Drawing.SystemColors.Control;
             this.dgvArticulos.Location = new System.Drawing.Point(115, 37);
@@ -81,7 +82,7 @@
             this.btnAgregar.Location = new System.Drawing.Point(16, 28);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.TabIndex = 0;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -92,7 +93,7 @@
             this.btnModificar.Location = new System.Drawing.Point(16, 42);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(75, 23);
-            this.btnModificar.TabIndex = 3;
+            this.btnModificar.TabIndex = 0;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -103,7 +104,7 @@
             this.btnEliminar.Location = new System.Drawing.Point(16, 86);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
-            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.TabIndex = 1;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -158,7 +159,7 @@
             // 
             this.lblCampo.AutoSize = true;
             this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCampo.Location = new System.Drawing.Point(13, 24);
+            this.lblCampo.Location = new System.Drawing.Point(13, 22);
             this.lblCampo.Name = "lblCampo";
             this.lblCampo.Size = new System.Drawing.Size(49, 13);
             this.lblCampo.TabIndex = 8;
@@ -168,7 +169,7 @@
             // 
             this.lblCriterio.AutoSize = true;
             this.lblCriterio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCriterio.Location = new System.Drawing.Point(228, 24);
+            this.lblCriterio.Location = new System.Drawing.Point(190, 22);
             this.lblCriterio.Name = "lblCriterio";
             this.lblCriterio.Size = new System.Drawing.Size(51, 13);
             this.lblCriterio.TabIndex = 9;
@@ -178,7 +179,7 @@
             // 
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFiltro.Location = new System.Drawing.Point(448, 24);
+            this.lblFiltro.Location = new System.Drawing.Point(371, 22);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(39, 13);
             this.lblFiltro.TabIndex = 10;
@@ -186,53 +187,70 @@
             // 
             // cbxCampo
             // 
+            this.cbxCampo.BackColor = System.Drawing.SystemColors.Window;
             this.cbxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCampo.FormattingEnabled = true;
             this.cbxCampo.Location = new System.Drawing.Point(68, 16);
             this.cbxCampo.Name = "cbxCampo";
-            this.cbxCampo.Size = new System.Drawing.Size(121, 21);
-            this.cbxCampo.TabIndex = 11;
+            this.cbxCampo.Size = new System.Drawing.Size(97, 21);
+            this.cbxCampo.TabIndex = 0;
             this.cbxCampo.SelectedIndexChanged += new System.EventHandler(this.cbxCampo_SelectedIndexChanged);
             // 
             // cbxCriterio
             // 
             this.cbxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCriterio.FormattingEnabled = true;
-            this.cbxCriterio.Location = new System.Drawing.Point(285, 16);
+            this.cbxCriterio.Location = new System.Drawing.Point(247, 16);
             this.cbxCriterio.Name = "cbxCriterio";
-            this.cbxCriterio.Size = new System.Drawing.Size(121, 21);
-            this.cbxCriterio.TabIndex = 12;
+            this.cbxCriterio.Size = new System.Drawing.Size(99, 21);
+            this.cbxCriterio.TabIndex = 1;
             // 
             // tbxFiltro
             // 
-            this.tbxFiltro.Location = new System.Drawing.Point(493, 17);
+            this.tbxFiltro.Location = new System.Drawing.Point(416, 17);
             this.tbxFiltro.Name = "tbxFiltro";
             this.tbxFiltro.Size = new System.Drawing.Size(143, 20);
-            this.tbxFiltro.TabIndex = 13;
+            this.tbxFiltro.TabIndex = 2;
+            this.tbxFiltro.TextChanged += new System.EventHandler(this.tbxFiltro_TextChanged);
+            this.tbxFiltro.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tbxFiltro_KeyUp);
             // 
-            // gbxFiltro
+            // gbxBuscador
             // 
-            this.gbxFiltro.Controls.Add(this.cbxCampo);
-            this.gbxFiltro.Controls.Add(this.tbxFiltro);
-            this.gbxFiltro.Controls.Add(this.lblCampo);
-            this.gbxFiltro.Controls.Add(this.cbxCriterio);
-            this.gbxFiltro.Controls.Add(this.lblCriterio);
-            this.gbxFiltro.Controls.Add(this.lblFiltro);
-            this.gbxFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxFiltro.Location = new System.Drawing.Point(96, 382);
-            this.gbxFiltro.Name = "gbxFiltro";
-            this.gbxFiltro.Size = new System.Drawing.Size(661, 43);
-            this.gbxFiltro.TabIndex = 3;
-            this.gbxFiltro.TabStop = false;
-            this.gbxFiltro.Text = "Filtro";
-            this.gbxFiltro.Enter += new System.EventHandler(this.gbxFiltro_Enter);
+            this.gbxBuscador.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.gbxBuscador.Controls.Add(this.btnBuscar);
+            this.gbxBuscador.Controls.Add(this.cbxCampo);
+            this.gbxBuscador.Controls.Add(this.tbxFiltro);
+            this.gbxBuscador.Controls.Add(this.lblCampo);
+            this.gbxBuscador.Controls.Add(this.cbxCriterio);
+            this.gbxBuscador.Controls.Add(this.lblCriterio);
+            this.gbxBuscador.Controls.Add(this.lblFiltro);
+            this.gbxBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxBuscador.Location = new System.Drawing.Point(90, 384);
+            this.gbxBuscador.Name = "gbxBuscador";
+            this.gbxBuscador.Size = new System.Drawing.Size(661, 48);
+            this.gbxBuscador.TabIndex = 3;
+            this.gbxBuscador.TabStop = false;
+            this.gbxBuscador.Text = "Buscador";
+            this.gbxBuscador.Enter += new System.EventHandler(this.gbxFiltro_Enter);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.btnBuscar.Location = new System.Drawing.Point(580, 16);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscar.TabIndex = 11;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = false;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1079, 437);
-            this.Controls.Add(this.gbxFiltro);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(1079, 442);
+            this.Controls.Add(this.gbxBuscador);
             this.Controls.Add(this.gbxNuevo);
             this.Controls.Add(this.gbxArticuloSeleccionado);
             this.Controls.Add(this.lblImagen);
@@ -250,8 +268,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenPrincipal)).EndInit();
             this.gbxArticuloSeleccionado.ResumeLayout(false);
             this.gbxNuevo.ResumeLayout(false);
-            this.gbxFiltro.ResumeLayout(false);
-            this.gbxFiltro.PerformLayout();
+            this.gbxBuscador.ResumeLayout(false);
+            this.gbxBuscador.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -274,6 +292,7 @@
         private System.Windows.Forms.ComboBox cbxCampo;
         private System.Windows.Forms.ComboBox cbxCriterio;
         private System.Windows.Forms.TextBox tbxFiltro;
-        private System.Windows.Forms.GroupBox gbxFiltro;
+        private System.Windows.Forms.GroupBox gbxBuscador;
+        private System.Windows.Forms.Button btnBuscar;
     }
 }

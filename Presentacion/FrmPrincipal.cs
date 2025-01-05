@@ -89,30 +89,52 @@ namespace Presentacion
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-
-            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
-
-            DialogResult resultado = MessageBox.Show("Seguro desea eliminar el articulo seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (resultado == DialogResult.Yes)
+            try
             {
-                articuloNegocio.eliminarArticulo(articuloSeleccionado);
+                if (dgvArticulos.CurrentRow != null && dgvArticulos.CurrentRow.Selected)
+                {
+                    articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+
+                    ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+
+                    DialogResult resultado = MessageBox.Show("Seguro desea eliminar el articulo seleccionado?", "Advertencia", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (resultado == DialogResult.Yes)
+                    {
+                        articuloNegocio.eliminarArticulo(articuloSeleccionado);
+                    }
+
+                    cargarBase();
+                }
             }
-            
+            catch (Exception ex)
+            {
 
-            
-
-
-            cargarBase();
+                MessageBox.Show(ex.ToString());
+            }
+ 
         }
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            FrmAlta frmAlta = new FrmAlta((Articulo)dgvArticulos.CurrentRow.DataBoundItem);
-            frmAlta.ShowDialog();
-            cargarBase();
 
+            try
+            {
+                if (dgvArticulos.CurrentRow != null && dgvArticulos.CurrentRow.Selected)
+                {
+                    Articulo articuloSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    FrmAlta frmAlta = new FrmAlta(articuloSeleccionado);
+                    frmAlta.ShowDialog();
+                    cargarBase();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
 
         private void gbxFiltro_Enter(object sender, EventArgs e)
@@ -156,6 +178,84 @@ namespace Presentacion
         private void cbxCampo_SelectedIndexChanged(object sender, EventArgs e)
         {
             cargarListaCriterio(cbxCampo.Text);
+        }
+
+        private void tbxFiltro_KeyUp(object sender, KeyEventArgs e)
+        {
+
+
+            
+        }
+
+        private void tbxFiltro_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private bool soloNumeros(String cadena) 
+        {
+            int cantidadPuntos = cadena.Count(letra => letra == '.');
+            int cantidadComas = cadena.Count(letra => letra == ',');
+
+            if (cantidadPuntos > 1 || cantidadComas > 1)
+            {
+                MessageBox.Show("Valor ingresado no numerico o no valido");
+                return false;
+            }
+            else if (cadena == "," || cadena == ".")
+            {
+                MessageBox.Show("Valor ingresado no numerico o no valido");
+                return false;
+            }
+            else if (cadena.Contains(".") && cadena.Contains(",")) 
+            {
+                MessageBox.Show("Valor ingresado no numerico o no valido");
+                return false;
+            }
+            else
+            {
+                foreach (char caracter in cadena)
+                {
+                    if (caracter != '.' && caracter != ',' && caracter != '0' && caracter != '1' && caracter != '2' && caracter != '3' && caracter != '4' && caracter != '5' && caracter != '6' && caracter != '7' && caracter != '8' && caracter != '9')
+                    {
+                        MessageBox.Show("Valor ingresado no numerico o no valido");
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+
+            String campo = cbxCampo.Text;
+            String criterio = cbxCriterio.Text;
+            String filtro = tbxFiltro.Text;
+
+            ArticuloNegocio articuloNegocio = new ArticuloNegocio();
+
+            if (campo == "Precio" && !soloNumeros(filtro)) 
+            {
+                return;
+            }
+
+            try
+            {
+                dgvArticulos.DataSource = articuloNegocio.filtrarArticulos(campo, criterio, filtro);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+
+
+
+
+
+
+
+
         }
     }
 }

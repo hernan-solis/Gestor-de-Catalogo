@@ -27,6 +27,7 @@ namespace Presentacion
             InitializeComponent();
             articulo = articuloSeleccionado;
             Text = "Modificacion";
+
         }
 
 
@@ -47,7 +48,16 @@ namespace Presentacion
                 articulo.Marca = (Marca)cbxMarca.SelectedItem;
                 articulo.Categoria= (Categoria)cbxCategoria.SelectedItem;
                 articulo.ImagenUrl = tbxImagenUrl.Text;
-                articulo.Precio = float.Parse(txbPrecio.Text.Replace(".",","));
+
+                if (txbPrecio.Text != "")
+                {
+                    articulo.Precio = float.Parse(txbPrecio.Text.Replace(".", ","));
+                }
+                else 
+                {
+                    articulo.Precio = 0;
+                }
+                
 
                 if (articulo.Id == 0)
                 {
@@ -111,6 +121,8 @@ namespace Presentacion
 
                     tbxImagenUrl.Text = articulo.ImagenUrl;
                     txbPrecio.Text = articulo.Precio.ToString();
+
+                    cargarImagen(pbxImagen, tbxImagenUrl.Text);
 
                 }
                 catch (Exception ex)
