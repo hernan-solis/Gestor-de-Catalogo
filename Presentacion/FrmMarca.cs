@@ -159,7 +159,7 @@ namespace Presentacion
                 if (dgvMarca.CurrentRow != null)
                 {
 
-                    DialogResult resulato = MessageBox.Show("Si eliminas una Marca que ya esté asociada a un articulo, no se podrá acceder a dicho articulo. Desea continuar?", "Alerta Eliminacion Permanente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult resulato = MessageBox.Show("Si eliminas una Marca que ya esté asociada a un articulo, no se podrá acceder más a dicho articulo. Desea continuar?", "Alerta Eliminacion Permanente", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (resulato == DialogResult.Yes) 
                     {

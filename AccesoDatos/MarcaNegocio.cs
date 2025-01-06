@@ -105,7 +105,7 @@ namespace AccesoDatos
         }
         public void eliminarMarca(Marca marca)
         {
-            List<Marca> listaMarca = new List<Marca>();
+           
             AccesoDatos accesoDatos = new AccesoDatos();
 
             try

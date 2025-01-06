@@ -268,9 +268,33 @@ namespace Presentacion
             FrmMarca frmMarca = new FrmMarca();
 
             frmMarca.ShowDialog();
+            try
+            {
+                cargarBase();
+            }
+            catch (Exception ex)
+            {
 
-            cargarBase();
+                MessageBox.Show(ex.ToString());
+            }
+            
 
+        }
+
+        private void categoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCategoria frmCategoria = new FrmCategoria();
+            frmCategoria.ShowDialog();
+            try
+            {
+                cargarBase();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
         }
     }
 }

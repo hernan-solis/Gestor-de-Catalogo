@@ -37,8 +37,8 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tbxEditar = new System.Windows.Forms.TextBox();
             this.gbxMarcaSeleccionada = new System.Windows.Forms.GroupBox();
-            this.gbxMarcaNueva = new System.Windows.Forms.GroupBox();
             this.lblMarcaSeleccionada = new System.Windows.Forms.Label();
+            this.gbxMarcaNueva = new System.Windows.Forms.GroupBox();
             this.tbxAgregar = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMarca)).BeginInit();
             this.gbxMarcaSeleccionada.SuspendLayout();
@@ -102,6 +102,7 @@
             // 
             this.dgvMarca.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarca.Location = new System.Drawing.Point(334, 50);
+            this.dgvMarca.MultiSelect = false;
             this.dgvMarca.Name = "dgvMarca";
             this.dgvMarca.ReadOnly = true;
             this.dgvMarca.Size = new System.Drawing.Size(235, 383);
@@ -141,6 +142,15 @@
             this.gbxMarcaSeleccionada.TabStop = false;
             this.gbxMarcaSeleccionada.Text = "Marca Seleccionada:";
             // 
+            // lblMarcaSeleccionada
+            // 
+            this.lblMarcaSeleccionada.AutoSize = true;
+            this.lblMarcaSeleccionada.Location = new System.Drawing.Point(130, 0);
+            this.lblMarcaSeleccionada.Name = "lblMarcaSeleccionada";
+            this.lblMarcaSeleccionada.Size = new System.Drawing.Size(123, 13);
+            this.lblMarcaSeleccionada.TabIndex = 10;
+            this.lblMarcaSeleccionada.Text = "Marca Seleccionada";
+            // 
             // gbxMarcaNueva
             // 
             this.gbxMarcaNueva.BackColor = System.Drawing.SystemColors.Control;
@@ -153,15 +163,6 @@
             this.gbxMarcaNueva.TabIndex = 9;
             this.gbxMarcaNueva.TabStop = false;
             this.gbxMarcaNueva.Text = "Marca Nueva";
-            // 
-            // lblMarcaSeleccionada
-            // 
-            this.lblMarcaSeleccionada.AutoSize = true;
-            this.lblMarcaSeleccionada.Location = new System.Drawing.Point(130, 0);
-            this.lblMarcaSeleccionada.Name = "lblMarcaSeleccionada";
-            this.lblMarcaSeleccionada.Size = new System.Drawing.Size(123, 13);
-            this.lblMarcaSeleccionada.TabIndex = 10;
-            this.lblMarcaSeleccionada.Text = "Marca Seleccionada";
             // 
             // tbxAgregar
             // 
@@ -176,7 +177,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(651, 481);
+            this.ClientSize = new System.Drawing.Size(634, 481);
             this.Controls.Add(this.gbxMarcaNueva);
             this.Controls.Add(this.gbxMarcaSeleccionada);
             this.Controls.Add(this.lblTitulo);
