@@ -45,11 +45,20 @@
             this.tbxFiltro = new System.Windows.Forms.TextBox();
             this.gbxBuscador = new System.Windows.Forms.GroupBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.mspMenuPrincipal = new System.Windows.Forms.MenuStrip();
+            this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.opcionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.guardarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.marcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.categoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxImagenPrincipal)).BeginInit();
             this.gbxArticuloSeleccionado.SuspendLayout();
             this.gbxNuevo.SuspendLayout();
             this.gbxBuscador.SuspendLayout();
+            this.mspMenuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvArticulos
@@ -58,7 +67,7 @@
             this.dgvArticulos.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvArticulos.Location = new System.Drawing.Point(115, 37);
+            this.dgvArticulos.Location = new System.Drawing.Point(117, 79);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
@@ -69,7 +78,7 @@
             // 
             // pbxImagenPrincipal
             // 
-            this.pbxImagenPrincipal.Location = new System.Drawing.Point(738, 37);
+            this.pbxImagenPrincipal.Location = new System.Drawing.Point(740, 79);
             this.pbxImagenPrincipal.Name = "pbxImagenPrincipal";
             this.pbxImagenPrincipal.Size = new System.Drawing.Size(334, 335);
             this.pbxImagenPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +122,7 @@
             // 
             this.lblArticulos.AutoSize = true;
             this.lblArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArticulos.Location = new System.Drawing.Point(373, 11);
+            this.lblArticulos.Location = new System.Drawing.Point(375, 51);
             this.lblArticulos.Name = "lblArticulos";
             this.lblArticulos.Size = new System.Drawing.Size(110, 20);
             this.lblArticulos.TabIndex = 5;
@@ -123,7 +132,7 @@
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(828, 11);
+            this.lblImagen.Location = new System.Drawing.Point(830, 51);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(176, 20);
             this.lblImagen.TabIndex = 6;
@@ -135,7 +144,7 @@
             this.gbxArticuloSeleccionado.Controls.Add(this.btnEliminar);
             this.gbxArticuloSeleccionado.Controls.Add(this.btnModificar);
             this.gbxArticuloSeleccionado.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxArticuloSeleccionado.Location = new System.Drawing.Point(2, 167);
+            this.gbxArticuloSeleccionado.Location = new System.Drawing.Point(4, 209);
             this.gbxArticuloSeleccionado.Name = "gbxArticuloSeleccionado";
             this.gbxArticuloSeleccionado.Size = new System.Drawing.Size(105, 130);
             this.gbxArticuloSeleccionado.TabIndex = 7;
@@ -148,7 +157,7 @@
             this.gbxNuevo.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.gbxNuevo.Controls.Add(this.btnAgregar);
             this.gbxNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxNuevo.Location = new System.Drawing.Point(2, 72);
+            this.gbxNuevo.Location = new System.Drawing.Point(4, 114);
             this.gbxNuevo.Name = "gbxNuevo";
             this.gbxNuevo.Size = new System.Drawing.Size(105, 66);
             this.gbxNuevo.TabIndex = 5;
@@ -225,7 +234,7 @@
             this.gbxBuscador.Controls.Add(this.lblCriterio);
             this.gbxBuscador.Controls.Add(this.lblFiltro);
             this.gbxBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxBuscador.Location = new System.Drawing.Point(90, 384);
+            this.gbxBuscador.Location = new System.Drawing.Point(92, 426);
             this.gbxBuscador.Name = "gbxBuscador";
             this.gbxBuscador.Size = new System.Drawing.Size(661, 48);
             this.gbxBuscador.TabIndex = 3;
@@ -244,12 +253,74 @@
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // mspMenuPrincipal
+            // 
+            this.mspMenuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.archivoToolStripMenuItem,
+            this.opcionesToolStripMenuItem,
+            this.aboutToolStripMenuItem});
+            this.mspMenuPrincipal.Location = new System.Drawing.Point(0, 0);
+            this.mspMenuPrincipal.Name = "mspMenuPrincipal";
+            this.mspMenuPrincipal.Size = new System.Drawing.Size(1079, 24);
+            this.mspMenuPrincipal.TabIndex = 8;
+            this.mspMenuPrincipal.Text = "menuStrip1";
+            // 
+            // archivoToolStripMenuItem
+            // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirToolStripMenuItem,
+            this.guardarToolStripMenuItem});
+            this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // opcionesToolStripMenuItem
+            // 
+            this.opcionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.marcaToolStripMenuItem,
+            this.categoriaToolStripMenuItem});
+            this.opcionesToolStripMenuItem.Name = "opcionesToolStripMenuItem";
+            this.opcionesToolStripMenuItem.Size = new System.Drawing.Size(69, 20);
+            this.opcionesToolStripMenuItem.Text = "Opciones";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // abrirToolStripMenuItem
+            // 
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirToolStripMenuItem.Text = "Abrir";
+            // 
+            // guardarToolStripMenuItem
+            // 
+            this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.guardarToolStripMenuItem.Text = "Guardar";
+            // 
+            // marcaToolStripMenuItem
+            // 
+            this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcaToolStripMenuItem.Text = "Marca";
+            this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
+            // 
+            // categoriaToolStripMenuItem
+            // 
+            this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem.Text = "Categoria";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1079, 442);
+            this.ClientSize = new System.Drawing.Size(1079, 487);
             this.Controls.Add(this.gbxBuscador);
             this.Controls.Add(this.gbxNuevo);
             this.Controls.Add(this.gbxArticuloSeleccionado);
@@ -257,7 +328,9 @@
             this.Controls.Add(this.lblArticulos);
             this.Controls.Add(this.pbxImagenPrincipal);
             this.Controls.Add(this.dgvArticulos);
+            this.Controls.Add(this.mspMenuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.mspMenuPrincipal;
             this.MaximizeBox = false;
             this.Name = "FrmPrincipal";
             this.ShowIcon = false;
@@ -270,6 +343,8 @@
             this.gbxNuevo.ResumeLayout(false);
             this.gbxBuscador.ResumeLayout(false);
             this.gbxBuscador.PerformLayout();
+            this.mspMenuPrincipal.ResumeLayout(false);
+            this.mspMenuPrincipal.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,5 +369,13 @@
         private System.Windows.Forms.TextBox tbxFiltro;
         private System.Windows.Forms.GroupBox gbxBuscador;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.MenuStrip mspMenuPrincipal;
+        private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem opcionesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem guardarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem marcaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem categoriaToolStripMenuItem;
     }
 }

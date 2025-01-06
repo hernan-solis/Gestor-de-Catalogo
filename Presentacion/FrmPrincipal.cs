@@ -199,17 +199,17 @@ namespace Presentacion
 
             if (cantidadPuntos > 1 || cantidadComas > 1)
             {
-                MessageBox.Show("Valor ingresado no numerico o no valido");
+                MessageBox.Show("Precio: valor a filtrar erroneo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (cadena == "," || cadena == ".")
             {
-                MessageBox.Show("Valor ingresado no numerico o no valido");
+                MessageBox.Show("Precio: valor a filtrar erroneo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else if (cadena.Contains(".") && cadena.Contains(",")) 
             {
-                MessageBox.Show("Valor ingresado no numerico o no valido");
+                MessageBox.Show("Precio: valor a filtrar erroneo", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return false;
             }
             else
@@ -218,7 +218,7 @@ namespace Presentacion
                 {
                     if (caracter != '.' && caracter != ',' && caracter != '0' && caracter != '1' && caracter != '2' && caracter != '3' && caracter != '4' && caracter != '5' && caracter != '6' && caracter != '7' && caracter != '8' && caracter != '9')
                     {
-                        MessageBox.Show("Valor ingresado no numerico o no valido");
+                        MessageBox.Show("Precio: valor a filtrar erroneo","Alerta",MessageBoxButtons.OK,MessageBoxIcon.Warning);
                         return false;
                     }
                 }
@@ -255,6 +255,21 @@ namespace Presentacion
 
 
 
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Desarrollado por hernansolis.com");
+        }
+
+        private void marcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMarca frmMarca = new FrmMarca();
+
+            frmMarca.ShowDialog();
+
+            cargarBase();
 
         }
     }
