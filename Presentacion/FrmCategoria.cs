@@ -41,6 +41,8 @@ namespace Presentacion
                 dgvCategoria.DataSource = categoriaNegocio.ListarCaterogia();
 
                 dgvCategoria.Columns["Id"].Visible = false;
+                
+                
             }
             catch (Exception ex)
             {
