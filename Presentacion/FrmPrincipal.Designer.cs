@@ -234,7 +234,7 @@
             this.gbxBuscador.Controls.Add(this.lblCriterio);
             this.gbxBuscador.Controls.Add(this.lblFiltro);
             this.gbxBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxBuscador.Location = new System.Drawing.Point(92, 426);
+            this.gbxBuscador.Location = new System.Drawing.Point(91, 426);
             this.gbxBuscador.Name = "gbxBuscador";
             this.gbxBuscador.Size = new System.Drawing.Size(661, 48);
             this.gbxBuscador.TabIndex = 3;
@@ -298,14 +298,14 @@
             // marcaToolStripMenuItem
             // 
             this.marcaToolStripMenuItem.Name = "marcaToolStripMenuItem";
-            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.marcaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.marcaToolStripMenuItem.Text = "Marca";
             this.marcaToolStripMenuItem.Click += new System.EventHandler(this.marcaToolStripMenuItem_Click);
             // 
             // categoriaToolStripMenuItem
             // 
             this.categoriaToolStripMenuItem.Name = "categoriaToolStripMenuItem";
-            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.categoriaToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.categoriaToolStripMenuItem.Text = "Categoria";
             this.categoriaToolStripMenuItem.Click += new System.EventHandler(this.categoriaToolStripMenuItem_Click);
             // 
