@@ -234,7 +234,7 @@
             this.gbxBuscador.Controls.Add(this.lblCriterio);
             this.gbxBuscador.Controls.Add(this.lblFiltro);
             this.gbxBuscador.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxBuscador.Location = new System.Drawing.Point(91, 426);
+            this.gbxBuscador.Location = new System.Drawing.Point(93, 426);
             this.gbxBuscador.Name = "gbxBuscador";
             this.gbxBuscador.Size = new System.Drawing.Size(661, 48);
             this.gbxBuscador.TabIndex = 3;
